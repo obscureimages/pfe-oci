@@ -33,5 +33,5 @@ EXPOSE 8282
 
 ENTRYPOINT ["/entrypoint.sh"]
 
-HEALTHCHECK --interval=30s --timeout=3s --start-period=15s --start-interval=5s --retries=3 \
+HEALTHCHECK --interval=30s --timeout=3s --start-period=15s --retries=3 \
  CMD wget --spider -q --tries=1 http://127.0.0.1:8282/about || exit 1
